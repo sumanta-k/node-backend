@@ -14,10 +14,8 @@ app.use((req, res, next) => {
 
 app.use((req, res, next) => {
     console.log("Another Middleware");
+    res.setHeader("Connection", "keep-alive");
+    res.send("<h1>HI From Express.js</h1>");
 });
 
-const server = http.createServer(app);
-
-server.listen(PORT, () => {
-    console.log(`Your server is running on port ${PORT}`);
-});
+app.listen(PORT);
