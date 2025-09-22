@@ -1,0 +1,17 @@
+{
+    "name": "study",
+    "version": "1.0.0",
+    "description": "node.js learning",
+    "main": "app.js",
+    "scripts": {
+        "test": "node app.js",
+        "start": "nodemon app.js",
+        "server": "node app.js",
+        "start-server": "node app.js"
+    },
+    "author": "sumanta",
+    "license": "MIT",
+    "devDependencies": {
+        "nodemon": "^3.1.10"
+    }
+}
