@@ -25,4 +25,10 @@ app.get("/message", (req, res, next) => {
 app.use(adminRoute);
 app.use(shopRoute);
 
+/* Page Not Found */
+
+app.use((req, res, next) => {
+    res.status(404).send(`<h1>Page Not Found for ${req.url}</h1>`);
+});
+
 app.listen(PORT);
