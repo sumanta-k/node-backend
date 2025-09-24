@@ -22,7 +22,7 @@ app.get("/message", (req, res, next) => {
 });
 
 /* placing which one comes first after which one  , does really matter , so be careful when placing */
-app.use(adminRoute);
+app.use("/admin", adminRoute);
 app.use(shopRoute);
 
 /* Page Not Found */
