@@ -1,4 +1,5 @@
 const http = require("http");
+const path = require("path");
 
 const express = require("express");
 const bodyParser = require("body-parser");
@@ -28,7 +29,8 @@ app.use(shopRoute);
 /* Page Not Found */
 
 app.use((req, res, next) => {
-    res.status(404).send(`<h1>Page Not Found for ${req.url}</h1>`);
+    // res.status(404).send(`<h1>Page Not Found for ${req.url}</h1>`);
+    res.sendFile(path.join(__dirname, "views", "404.html"));
 });
 
 app.listen(PORT);
