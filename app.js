@@ -7,6 +7,7 @@ const bodyParser = require("body-parser");
 /* importing files from local directory */
 const adminRoute = require("./routes/admin.js");
 const shopRoute = require("./routes/shop.js");
+const rootDir = require("./util/path.js");
 
 const PORT = 3000;
 
@@ -30,7 +31,7 @@ app.use(shopRoute);
 
 app.use((req, res, next) => {
     // res.status(404).send(`<h1>Page Not Found for ${req.url}</h1>`);
-    res.status(404).sendFile(path.join(__dirname, "views", "404.html"));
+    res.status(404).sendFile(path.join(rootDir, "views", "404.html"));
 });
 
 app.listen(PORT);
