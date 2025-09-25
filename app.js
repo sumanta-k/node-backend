@@ -30,7 +30,7 @@ app.use(shopRoute);
 
 app.use((req, res, next) => {
     // res.status(404).send(`<h1>Page Not Found for ${req.url}</h1>`);
-    res.sendFile(path.join(__dirname, "views", "404.html"));
+    res.status(404).sendFile(path.join(__dirname, "views", "404.html"));
 });
 
 app.listen(PORT);
