@@ -17,6 +17,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 /* extended : true --> this will work for ** nested OBJECT and ARRAY ** */
 /* extended : false ---> this will work for ** strings ** */
 
+app.use(express.static(path.join(__dirname, "public")));
+
 app.get("/message", (req, res, next) => {
     console.log("inside the /message path");
     console.log(req.url);
