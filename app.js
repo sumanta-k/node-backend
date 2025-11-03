@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const expressHbs = require("express-handlebars");
 
 const app = express();
+app.engine("handlebars", expressHbs());
 app.set("view engine", "pug");
 app.set("views", "views");
 
