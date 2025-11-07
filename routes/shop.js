@@ -15,7 +15,13 @@ router.get("/", (req, res, next) => {
     */
     // it wasn't rendering the shop.pug , cause we had set it to shop.html in the above line
     // so i had to use the .render() to render shop.pug file
-    res.render("shop", { prods: products, pageTitle: "Shop" ,path : "/"});
+    console.log(products.title);
+    res.render("shop", {
+        prods: products,
+        pageTitle: "Shop",
+        path: "/",
+        hasProducts: products.length > 0,
+    });
 });
 
 module.exports = router;
