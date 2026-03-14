@@ -1,10 +1,5 @@
 const path = require("path");
 const http = require("https");
-http.createServer((req, res) => {
-	if (req.url == '/') {
-		res.end("You fucking idiot");
-	}
-})
 
 const express = require("express");
 const bodyParser = require("body-parser");
