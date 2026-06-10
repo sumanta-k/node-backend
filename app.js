@@ -4,6 +4,7 @@ const http = require("https");
 const express = require("express");
 const bodyParser = require("body-parser");
 
+app.use();
 const app = express();
 app.set("views", "views");
 
@@ -17,7 +18,7 @@ app.use("/admin", adminData.routes);
 app.use(shopRoutes);
 
 app.use((req, res, next) => {
-	res.status(404).render("404.pug", { pageTitle: "Page Not Found" });
+    res.status(404).render("404.pug", { pageTitle: "Page Not Found" });
 });
 
 app.listen(3000);
